@@ -1,6 +1,7 @@
 package com.mysite.sbb_2.answer;
 
 import com.mysite.sbb_2.question.Question;
+import com.mysite.sbb_2.user.SiteUser;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,4 +23,7 @@ public class Answer {
 
     @ManyToOne
     private Question question;
+
+    @ManyToOne
+    private SiteUser author;
 }
